@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap');
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vh 1vw;
+  font-family: 'Handlee';
+}
+
+.gallery .inputs {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-bottom: 2vh;
+  padding: 2vh 1vw;
+}
+
+.gallery .inputs input {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 -1px 0 0 #000000;
+  box-shadow: 1px 0 0 0 #000000;
+  box-shadow: 0 1px 0 0 #000000;
+  box-shadow: -1px 0 0 0 #000000;
+  box-shadow: 0 0 0 1px #000000;
+  margin-bottom: 1vh;
+  padding: 1vh .6vw;
+  font-family: 'Handlee';
+  font-size: 17px;
+}
+
+.gallery .inputs input:focus {
+  outline: none;
+}
+
+.gallery .inputs .radios {
+  display: flex;
+  margin-block: 1vh;
+  justify-content: space-around;
+}
+
+.gallery .inputs .radios div label {
+  margin-left: .6vw;
+  text-transform: capitalize;
+}
+
+.gallery .inputs button {
+  border: none;
+  border-radius: 5px;
+  background-color: #795548;
+  color: #ffffff;
+  padding: 1vh 1vw;
+  font-size: 16px;
+  font-family: 'Handlee';
+  cursor: pointer;
+}
+
+.gallery .images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vh 1vw;
+}
+
+.gallery .images .image {
+  width: 100%;
+}
+
+.gallery .images .image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery .images .image div {
+  padding: 1vh auto 1vh 0;
+  font-size: 18px;
+}
+
+.gallery .images .image div a {
+  color: #795548;
+  cursor: pointer;
+}
+
+.gallery .images .image div span:last-child {
+  margin-left: .5vw;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery .inputs {
+    width: 78%;
+  }
+
+  .gallery .images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .6vh 1vw;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .gallery .inputs {
+    width: 98%;
+  }
+
+  .gallery .images {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: .6vh 1vw;
+  }
+}
+
+/* Loading */
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #795548;
+  border-color: #795548 transparent #795548 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

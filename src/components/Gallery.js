@@ -46,7 +46,7 @@ const Gallery = () => {
 
   useEffect(() => {
     getPhotos(formData.query, formData.orientation);
-  }, [])
+  })
 
   return (
     <div className="gallery">
